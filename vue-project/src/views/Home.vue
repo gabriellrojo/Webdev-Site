@@ -10,9 +10,9 @@ export default {
     name:"Home"
 }
 </script>
-<style>
+<style scoped>
     .container{
-        height: 84vh;
+        min-height: 84vh;
         background-color: #344960;
         display: flex;
         flex-direction: column;

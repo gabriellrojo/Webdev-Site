@@ -6,8 +6,8 @@
             <ul class="big-screen">
                 <li><RouterLink to="/">Home</RouterLink></li>
                 <li><RouterLink to="/videos">Vídeos</RouterLink></li>
-                <li><RouterLink to="/about">Sobre</RouterLink></li>
-                <li><RouterLink to="/contato">Contato</RouterLink></li>
+                <li><RouterLink to="/">Sobre</RouterLink></li>
+                <li><RouterLink to="/">Contato</RouterLink></li>
             </ul>
         </nav>
         <div @click="closeMenu" v-show="menuActive" class="container"></div>
@@ -16,8 +16,8 @@
                 <img class="img-logo" src="https://raw.githubusercontent.com/william-costa/wdev-mock-site-resources/master/assets/images/wdev.svg" alt="w-dev">
                 <li><RouterLink to="/">Home</RouterLink></li>
                 <li><RouterLink to="/videos">Vídeos</RouterLink></li>
-                <li><RouterLink to="/about">Sobre</RouterLink></li>
-                <li><RouterLink to="/contato">Contato</RouterLink></li>
+                <li><RouterLink to="/">Sobre</RouterLink></li>
+                <li><RouterLink to="/">Contato</RouterLink></li>
             </ul>       
         </div>
     </header>
