@@ -6,8 +6,8 @@
             <ul class="big-screen">
                 <li><RouterLink to="/">Home</RouterLink></li>
                 <li><RouterLink to="/videos">Vídeos</RouterLink></li>
-                <li><RouterLink to="/">Sobre</RouterLink></li>
-                <li><RouterLink to="/">Contato</RouterLink></li>
+                <li><RouterLink to="/about">Sobre</RouterLink></li>
+                <li><RouterLink to="/contato">Contato</RouterLink></li>
             </ul>
         </nav>
         <div @click="closeMenu" v-show="menuActive" class="container"></div>
@@ -16,7 +16,7 @@
                 <img class="img-logo" src="https://raw.githubusercontent.com/william-costa/wdev-mock-site-resources/master/assets/images/wdev.svg" alt="w-dev">
                 <li><RouterLink to="/">Home</RouterLink></li>
                 <li><RouterLink to="/videos">Vídeos</RouterLink></li>
-                <li><RouterLink to="/">Sobre</RouterLink></li>
+                <li><RouterLink to="/about">Sobre</RouterLink></li>
                 <li><RouterLink to="/">Contato</RouterLink></li>
             </ul>       
         </div>
@@ -39,13 +39,6 @@ export default {
         closeMenu(){
             this.menuActive = false
         },
-        async getIcons(){
-            
-            const req = await fetch("https://raw.githubusercontent.com/william-costa/wdev-mock-site-resources/master/api/social-links.json")
-
-            const data = await req.json()
-            console.log(data)
-        }
     }
 }
 </script>
@@ -107,7 +100,7 @@ export default {
     }
 
     .lista-escrita{
-        margin-top: 50px
+        margin-top: 50px;
     }
 
     @media(min-width: 720px){
@@ -122,7 +115,13 @@ export default {
 
         li{
             margin-top: 0;
-            margin-right: 20px;
+            margin-right: 30px;
+        }
+        li:nth-child(4){
+            margin-right: 50px;
+        }
+        .logo{
+            margin-left: 30px;
         }
 
     }

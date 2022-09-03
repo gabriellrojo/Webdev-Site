@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h2>Videos</h2>
+    <h1>Videos</h1>
     <div class="container-videos">
       <a v-for="(video, index) in videos" :key="index" :href="video.link"><img class="thumbs" :src="video.thumb" :alt="video.link"><p>{{video.title}}</p></a>
     </div>
@@ -32,12 +32,12 @@ export default {
 <style scoped>
   .container{
     min-height: 84vh;
+    margin: 20px
   }
 
-  h2{
+  h1{
     color: #FF5555;
-    margin-top: 30px;
-    margin-left: 55px;
+    margin-left: 22px;
   }
 
   .container-videos{
@@ -52,12 +52,28 @@ export default {
   }
 
   .thumbs{
-    max-width: 550px;
+    width: 550px;
     margin: 50px 0
   }
 
   a:nth-child(3){
     margin-bottom: 50px;
+  }
+
+  @media(min-width: 720px){
+
+    .container-videos{
+      flex-direction: row;
+    }
+    
+    a:nth-child(3){
+    margin-bottom: 0;
+    }
+    .thumbs{
+    width: 200px;
+    margin: 50px 0
+    }
+      
   }
  
 </style>
